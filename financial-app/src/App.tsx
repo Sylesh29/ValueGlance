@@ -5,17 +5,18 @@ import "./App.css";
 const API_URL = "http://127.0.0.1:8000/filtered-data";
 
 const App = () => {
-  const [data, setData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]); // Full dataset
+  const [filteredData, setFilteredData] = useState([]); // Filtered dataset
+  const [error, setError] = useState(""); // Error state
+  const [loading, setLoading] = useState(true); // Loading state
 
+  // Fetch data from the API
   useEffect(() => {
     axios
       .get(API_URL)
       .then((response) => {
-        setData(response.data.data);
-        setFilteredData(response.data.data);
+        setData(response.data.data); // Full data from API
+        setFilteredData(response.data.data); // Initialize filtered data
         setLoading(false);
       })
       .catch(() => {
@@ -24,6 +25,7 @@ const App = () => {
       });
   }, []);
 
+  // Function to apply filters
   const handleFilter = (filters) => {
     const { startDate, endDate, minRevenue, maxRevenue } = filters;
 
@@ -40,15 +42,14 @@ const App = () => {
   };
 
   const handleClear = () => {
-    // Reset filtered data to original data
-    setFilteredData(data);
-
-    // Clear the form inputs
-    const form = document.getElementById("filterForm");
+    setFilteredData(data); 
+    
+    const form = document.getElementById("filterForm") as HTMLFormElement;
     if (form) {
       form.reset();
     }
   };
+  
 
   return (
     <div>
@@ -62,6 +63,7 @@ const App = () => {
           <p className="error">{error}</p>
         ) : (
           <>
+            {/* Filter Form */}
             <form
               id="filterForm"
               onSubmit={(e) => {
@@ -94,7 +96,9 @@ const App = () => {
                 </div>
               </div>
               <div className="button-row">
-                <button type="submit" className="apply-button">Apply Filters</button>
+                <button type="submit" className="apply-button">
+                  Apply Filters
+                </button>
                 <button
                   type="button"
                   className="clear-button"
@@ -105,6 +109,7 @@ const App = () => {
               </div>
             </form>
 
+            {/* Table */}
             <table>
               <thead>
                 <tr>
