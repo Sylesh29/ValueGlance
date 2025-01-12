@@ -5,6 +5,7 @@ import "./App.css";
 const API_URL = "http://127.0.0.1:8000/filtered-data";
 
 
+
 const App = () => {
   const [data, setData] = useState([]); 
   const [filteredData, setFilteredData] = useState([]); 
