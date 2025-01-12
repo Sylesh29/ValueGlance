@@ -2,6 +2,10 @@ from fastapi import FastAPI, Query
 from typing import Optional
 import requests
 from fastapi.middleware.cors import CORSMiddleware
+import os
+
+
+
 
 app = FastAPI()
 
@@ -13,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-API_URL = "https://financialmodelingprep.com/api/v3/income-statement/AAPL?period=annual&apikey=XhPcphODYArbBpoPptiWR2a9vZtzPqFM"
+API_URL = os.getenv("API_URL")
 
 financial_data = []
 
