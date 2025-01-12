@@ -56,7 +56,7 @@ form input:focus {
   box-shadow: 0 0 6px rgba(0, 102, 204, 0.3);
 }
 
-/* Buttons */
+
 button {
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -88,7 +88,7 @@ button {
   box-shadow: 0 4px 8px rgba(230, 57, 70, 0.4);
 }
 
-/* Table */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -121,7 +121,7 @@ table tbody tr:hover {
   cursor: pointer;
 }
 
-/* Filter Row */
+
 .filter-row {
   display: flex;
   flex-wrap: wrap;
@@ -133,7 +133,7 @@ table tbody tr:hover {
   flex: 1 1 calc(50% - 1.5rem);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .filter-row div {
     flex: 1 1 100%;

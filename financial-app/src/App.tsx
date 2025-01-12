@@ -4,19 +4,20 @@ import "./App.css";
 
 const API_URL = "http://127.0.0.1:8000/filtered-data";
 
-const App = () => {
-  const [data, setData] = useState([]); // Full dataset
-  const [filteredData, setFilteredData] = useState([]); // Filtered dataset
-  const [error, setError] = useState(""); // Error state
-  const [loading, setLoading] = useState(true); // Loading state
 
-  // Fetch data from the API
+const App = () => {
+  const [data, setData] = useState([]); 
+  const [filteredData, setFilteredData] = useState([]); 
+  const [error, setError] = useState(""); 
+  const [loading, setLoading] = useState(true); 
+
+  
   useEffect(() => {
     axios
       .get(API_URL)
       .then((response) => {
-        setData(response.data.data); // Full data from API
-        setFilteredData(response.data.data); // Initialize filtered data
+        setData(response.data.data); 
+        setFilteredData(response.data.data); 
         setLoading(false);
       })
       .catch(() => {
@@ -25,7 +26,7 @@ const App = () => {
       });
   }, []);
 
-  // Function to apply filters
+  
   const handleFilter = (filters) => {
     const { startDate, endDate, minRevenue, maxRevenue } = filters;
 
@@ -63,7 +64,7 @@ const App = () => {
           <p className="error">{error}</p>
         ) : (
           <>
-            {/* Filter Form */}
+            {}
             <form
               id="filterForm"
               onSubmit={(e) => {
@@ -109,7 +110,7 @@ const App = () => {
               </div>
             </form>
 
-            {/* Table */}
+            {}
             <table>
               <thead>
                 <tr>
