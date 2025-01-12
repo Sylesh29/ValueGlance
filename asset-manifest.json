@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ValueGlance/static/css/main.31ad7b59.css",
+    "main.js": "/ValueGlance/static/js/main.8fb07ce9.js",
+    "static/js/488.b22b2aae.chunk.js": "/ValueGlance/static/js/488.b22b2aae.chunk.js",
+    "index.html": "/ValueGlance/index.html",
+    "main.31ad7b59.css.map": "/ValueGlance/static/css/main.31ad7b59.css.map",
+    "main.8fb07ce9.js.map": "/ValueGlance/static/js/main.8fb07ce9.js.map",
+    "488.b22b2aae.chunk.js.map": "/ValueGlance/static/js/488.b22b2aae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31ad7b59.css",
+    "static/js/main.8fb07ce9.js"
+  ]
+}
