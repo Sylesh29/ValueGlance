@@ -19,7 +19,7 @@ As someone deeply passionate about **finance** and **technology**, I believe in 
 ---
 
 ## 🚀 Live Demo
-Check out the live app here: **[Financial Data Filtering App](https://your-vercel-url.vercel.app)**
+Check out the live app here: https://sylesh29.github.io/ValueGlance/
 
 ---
 
